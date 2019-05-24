@@ -5,7 +5,7 @@
     <meta charset="utf-8"></head>
   <body>
     
-    <h1>Отправьте заявку! - 2</h1>
+    <h1>Отправьте заявку! - 3</h1>
     
     <form name="leadForm">
       <input type="text" name="name" placeholder="Ваше имя"></input>
@@ -15,18 +15,22 @@
 
 
 <script>
+
+  
   var nameText = document.leadForm.name;
   var phone_numberText = document.leadForm.phone_number;
   var send_dataButton = document.getElementById("send_data")
   
-
+  window.onload = init;
   
-  send_dataButton.onclick = handleButtonClick;
-  
-    function handleButtonClick {
-    alert("234");
+  function init(){
+    var button = document.getElementById("send_data")
+    button.onclick = handleButtonClick;
   }
-
+  
+  function handleButtonClick() {
+    alert("Вы нажали на кнопку");
+  }
 
 </body>
 </html>
